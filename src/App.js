@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from './logo.svg';
 import './App.css';
 import Home from './Components/Home';
 import Makechoice from './Components/Makechoice';
@@ -47,12 +48,12 @@ function App() {
               <hr class="clearfix w-100 d-md-none pb-3"></hr>
               <div class="col-md-6 ">
                 <h5 >About Us</h5>
-                <p>GiganticDesire is a Bangladeshi e-commerce company based in Mirpur, Dhaka, Bangladesh. It was founded by Nusrat J Bornona in 2007.</p>
+                <p>GiganticDesire is an Indian e-commerce company based in Bangalore, Karnataka, India. It was founded by xxxxxxx  in 2007.</p>
               </div>
               <hr class="clearfix w-100 d-md-none pb-3"></hr>
               <div class="col-md-3">
                 <h5 >Contact us :</h5>
-                <p> <i className="  brand text-white fa fa-whatsapp" ></i>&nbsp; : &nbsp; 347-8256990</p>
+                <p> <i className="  brand text-white fa fa-whatsapp" ></i>&nbsp; : &nbsp; xxxxxxxxx</p>
               </div>
             </div>
             </div>
