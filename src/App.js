@@ -48,7 +48,7 @@ function App() {
               <hr class="clearfix w-100 d-md-none pb-3"></hr>
               <div class="col-md-6 ">
                 <h5 >About Us</h5>
-                <p>GiganticDesire is a USA e-commerce company based in Bronx, N.Y, USA. It was founded by Nusrat  in 2007.</p>
+                <p>GiganticDesire is a USA e-commerce company based in Bronx, N.Y, USA. It was founded by Nusrat J Bornona in 2020.</p>
               </div>
               <hr class="clearfix w-100 d-md-none pb-3"></hr>
               <div class="col-md-3">
