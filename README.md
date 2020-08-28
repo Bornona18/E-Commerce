@@ -17,7 +17,7 @@ This E-Commerce app is about shopping. People from any age can shop here. Its ea
 
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 
 ## Available Scripts
 
