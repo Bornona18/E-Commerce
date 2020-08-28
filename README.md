@@ -1,4 +1,4 @@
-Deployed Link for this APP:- https://youthful-agnesi-b492d6.netlify.app/
+Deployed Link for this APP:- https://sharp-nobel-82f421.netlify.app
 
 
 This E-Commerce app is about shopping. People from any age can shop here. Its easy to shop here.
