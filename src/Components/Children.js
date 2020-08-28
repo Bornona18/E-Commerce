@@ -7,6 +7,8 @@ import './CSS/home.css'
 import { childrenshoes, childrendress } from './../redux/Action/actioncreator'
 import { connect } from 'react-redux'
 
+
+//  stateless Component
 function Children1(props) {
     const history = useHistory()
     const { FullName } = useParams()
@@ -20,7 +22,7 @@ function Children1(props) {
 
     // Api call For Children's dresses
     useEffect(() => {
-        axios.get(` https://glacial-hamlet-86575.herokuapp.com/childrendress`)
+        axios.get(`https://glacial-hamlet-86575.herokuapp.com/childrendress`)
             .then(res => {
                 setDress(res.data)
             }).catch(err => console.log(err))
@@ -35,16 +37,18 @@ function Children1(props) {
     }, [])
 
 
-    function submitDress(e) {
-        DressSelected.push({ name: e.target.value, quantity: DressQuantity })
-        setDressQuantity(0)
-    }
 
-    function submitShoes(e) {
-        ShoeSelected.push({ name: e.target.value, quantity: ShoeQuantity })
-        setShoeQuantity(0)
+// on Pressing Add to cart , selected  data will be pushed into array
+function submitDress(e) {
+    DressSelected.push({ name: e.target.value, quantity: DressQuantity , price: e.target.name})
+    setDressQuantity(0)
+}
 
-    }
+function submitShoes(e) {
+    ShoeSelected.push({ name: e.target.value, quantity: ShoeQuantity,price: e.target.name})
+    setShoeQuantity(0)
+
+}
 
     function ShowDress() {
         setDressQuantity(0)
@@ -52,8 +56,8 @@ function Children1(props) {
         setdata(true)
 
     }
-
-    // navigate to cart after pressing go to cart
+    // navigate to cart after pressing go to cart and at same time it will store data on redux
+  
     function checkout(event) {
         if (DressSelected.length == 0 && ShoeSelected.length == 0) {
             alert("Your cart is Empty")
@@ -87,7 +91,9 @@ function Children1(props) {
                                             <input type="number" min="0" max="10" onChange={(e) => setDressQuantity(e.target.value)} className="form-control" placeholder="Enter quantity" />
                                         </div></form>
                                     <br /> <br />
-                                    <button className=" mybtn btn btn-primary" onClick={submitDress} value={p.value}>ADD TO CART</button>
+                                    <b>  <p className="pricetag">Rs {p.price} /-</p></b>
+                
+                                    <button className=" mybtn btn btn-primary" name={p.price} onClick={submitDress} value={p.value}>ADD TO CART</button>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +102,7 @@ function Children1(props) {
             </div>
         </div>
     }
-    // setting dress data 
+    // setting shoes data 
     else {
         data = <div>
             <div className=" hero row">
@@ -112,7 +118,9 @@ function Children1(props) {
                                             <input type="number" onChange={(e) => setShoeQuantity(e.target.value)} className="form-control" placeholder="Enter quantity" />
                                         </div></form>
                                     <br /> <br />
-                                    <button className=" mybtn btn btn-primary" onClick={submitShoes} value={p.value}>ADD TO CART</button>
+                                    <b>  <p className="pricetag">$ {p.price} /-</p></b>
+                
+                                    <button className=" mybtn btn btn-primary" onClick={submitShoes} name={p.price} value={p.value}>ADD TO CART</button>
                                 </div>
                             </div>
                         </div>
@@ -166,3 +174,4 @@ const mapdispatchToProps = dispatch => {
     }
 }
 export default connect(mapStateToProps, mapdispatchToProps)(Children1)
+
