@@ -7,8 +7,6 @@ import './CSS/home.css'
 import { childrenshoes, childrendress } from './../redux/Action/actioncreator'
 import { connect } from 'react-redux'
 
-
-//  stateless Component
 function Children1(props) {
     const history = useHistory()
     const { FullName } = useParams()
@@ -37,8 +35,6 @@ function Children1(props) {
     }, [])
 
 
-
-// on Pressing Add to cart , selected  data will be pushed into array
     function submitDress(e) {
         DressSelected.push({ name: e.target.value, quantity: DressQuantity })
         setDressQuantity(0)
@@ -56,8 +52,8 @@ function Children1(props) {
         setdata(true)
 
     }
-    // navigate to cart after pressing go to cart and at same time it will store data on redux
-  
+
+    // navigate to cart after pressing go to cart
     function checkout(event) {
         if (DressSelected.length == 0 && ShoeSelected.length == 0) {
             alert("Your cart is Empty")
@@ -100,7 +96,7 @@ function Children1(props) {
             </div>
         </div>
     }
-    // setting shoes data 
+    // setting dress data 
     else {
         data = <div>
             <div className=" hero row">
