@@ -1,10 +1,8 @@
-
 import React from 'react'
 import './CSS/choice.css'
 
 import { useHistory,useParams } from 'react-router-dom'
 
-//  stateless Component
 function Makechoice() {
     const history=useHistory()
     const {FullName}=useParams()
@@ -60,4 +58,5 @@ function Makechoice() {
 }
 
 export default Makechoice
+
 
