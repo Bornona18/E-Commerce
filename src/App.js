@@ -53,7 +53,7 @@ function App() {
               <hr class="clearfix w-100 d-md-none pb-3"></hr>
               <div class="col-md-3">
                 <h5 >Contact us :</h5>
-                <p> <i className="  brand text-white fa fa-whatsapp" ></i>&nbsp; : &nbsp; xxxxxxxxx</p>
+                <p> <i className="  brand text-white fa fa-whatsapp" ></i>&nbsp; : &nbsp; 347-8256990</p>
               </div>
             </div>
             </div>
