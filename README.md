@@ -1,7 +1,7 @@
 Deployed Link for this APP:
 
 
-This E Commerce app is about shopping. People from any age can shop here. ITs 
+This E Commerce app is about shopping. People from any age can shop here. Its easy
 
 
 
