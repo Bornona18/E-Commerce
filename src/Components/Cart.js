@@ -7,8 +7,6 @@ import './CSS/home.css'
 import { shoes, dress } from './../redux/Action/actioncreator'
 import { connect } from 'react-redux'
 
-
-//  statefull Component
 class Cart extends Component {
     constructor(props) {
         super(props)
@@ -30,8 +28,6 @@ class Cart extends Component {
         let WomenShoeData
         let ChildrenDressData
         let ChildrenShoeData
-
-        // in this section, we are getting data from redux and displaying on web page
 
         if (this.props.mendress.length > 0) {
             MenDressData = <div>
@@ -168,7 +164,6 @@ class Cart extends Component {
         return (
             <div>
             <h1>Your Cart is ready</h1> <br/><br/><br/>
-            
  {MenDressData}
                 {MenShoeData}
                {WomenDressData}
@@ -188,7 +183,7 @@ class Cart extends Component {
         )
     }
 }
-// fetching  data from redux and mapping to component
+
 const mapStateToProps = state => {
     return {
         menshoes: state.menshoes,
@@ -207,4 +202,3 @@ const mapdispatchToProps = dispatch => {
     }
 }
 export default connect(mapStateToProps, mapdispatchToProps)(Cart)
-
